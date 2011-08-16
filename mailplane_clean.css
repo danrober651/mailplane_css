@@ -5,13 +5,14 @@ Based heavily on work by Ansel Santosa (http://www.anselsantosa.com/) in the Chr
 Download URL: <http://jimmitchell.org/files/mailplane_clean.css.zip>
 This work released under GNU General Public License, version 3 (GPL-3.0): <http://www.opensource.org/licenses/gpl-3.0.html>
 
-Version: 2.0.4
+Version: 2.0.5
 
 Change Log:
 04/25/11	(2.0.1) - total rework for new Gmail UI. Changes too numerous to list...
 05/23/11	(2.0.2) - include webkit transitions
 08/16/11	(2.0.3) - remove ad block for new split view option & get rid of older CSS that's no longer needed.
 08/16/11	(2.0.4) - add back some styles needed for those not using the new preview pane (duh).
+08/16/11	(2.0.5) - some minor tweaks to remove gaps between left navigation & main body in preview pane mode.
 
 */
 
@@ -62,7 +63,7 @@ table.dFFoge.dGpsQd > tr > td:nth-child(2) {display: none !important}
 table.iY div.hj div.hk {display: inline !important; padding-right: 5px !important;}
 .u8 {display: none !important;}
 .u5 {width: 0px !important;}
-div[class="ip iq"] {margin-right: 13px !important;}
+div[class='ip iq'] {margin-right: 13px !important;}
 textarea.ir {width: 100% !important;}
 /* END RAPPORTIVE/PEOPLE BLOCK */
 
@@ -85,6 +86,7 @@ div[role = 'navigation'] + div > span > span.CJ {visibility: hidden;}
 div[role = 'navigation'] + div > span > span.CJ:before {content: 'More'; visibility: visible; font-weight: 400;}
 div.pY {display: none !important;}
 div.pp.T0:nth-child(4), div.pp.ps.TZ:nth-child(4), div.T0.TZ.pp {display: none !important;}
+div[role='navigation'] div[class='uxFfPb bgi53d'] {border-right: none !important; padding-right: 0 !important;}
 
 /* hide footer info */
 div.JrzpPb {display: none !important;}
@@ -104,6 +106,4 @@ div.JrzpPb {display: none !important;}
 .l2.oy8Mbf > div:nth-child(4) {display: none !important;}
 */
 
-
 /* ------------------ EOF ------------------ */
-
