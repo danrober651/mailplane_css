@@ -5,12 +5,13 @@ Based heavily on work by Ansel Santosa (http://www.anselsantosa.com/) in the Chr
 Download URL: <http://jimmitchell.org/files/mailplane_clean.css.zip>
 This work released under GNU General Public License, version 3 (GPL-3.0): <http://www.opensource.org/licenses/gpl-3.0.html>
 
-Version: 2.0.3
+Version: 2.0.4
 
 Change Log:
 04/25/11	(2.0.1) - total rework for new Gmail UI. Changes too numerous to list...
 05/23/11	(2.0.2) - include webkit transitions
 08/16/11	(2.0.3) - remove ad block for new split view option & get rid of older CSS that's no longer needed.
+08/16/11	(2.0.4) - add back some styles needed for those not using the new preview pane (duh).
 
 */
 
@@ -26,10 +27,8 @@ Change Log:
 body {font-family: Helvetica, sans-serif;font-size: 12pt;}
 
 /* hide the top google bar & make adjustments */
-/*
 #gbar, #guser, #gb, #gbz, span[id=":r2"] {display: none;}
 .nH.qp {border:none;height: 12px;}
-*/
 
 /* clean up the search form */
 table[role='search'] div[role='button']:last-child {display: none !important;}
@@ -71,6 +70,9 @@ textarea.ir {width: 100% !important;}
 div.nH.MC, div.z0DeRc {display: none !important;}
 .T4 {border-bottom: 0 !important;}
 .T0, .TZ {border-top: 0 !important;}
+div.nH.MC, div.z0DeRc {display: none !important;}
+.T4 {border-bottom: 0 !important;}
+.T0, .TZ {border-top: 0 !important;}
 div.CX.pp, div.T4.pp {display: none !important;}
 div.CX.pp div:nth-child(1) {display: none !important;}
 div.CX.pp div:nth-child(2) {display: none !important;}
@@ -86,6 +88,22 @@ div.pp.T0:nth-child(4), div.pp.ps.TZ:nth-child(4), div.T0.TZ.pp {display: none !
 
 /* hide footer info */
 div.JrzpPb {display: none !important;}
+.l2:not(.oy8Mbf) > div:nth-child(3) {display: none !important;}
+.l2.oy8Mbf > div:nth-child(2) {display: none !important;}
+.l2:not(.oy8Mbf) > div:nth-child(6) {display: none !important;}
+.l2.oy8Mbf > div:nth-child(5) {display: none !important;}
+.l2:not(.oy8Mbf) > div:nth-child(7) {display: none !important;}
+.l2.oy8Mbf > div:nth-child(6) {display: none !important;}
+.l2:not(.oy8Mbf) > div:nth-child(4) {display: none !important;}
+.l2.oy8Mbf > div:nth-child(3) {display: none !important;}
+.l2.oy8Mbf > div:nth-child(3) td:nth-child(1) {display: none !important;}
+.l2.oy8Mbf > div:nth-child(3) td:nth-child(2) {display: none !important;}
+.l2.oy8Mbf > div:nth-child(3) td:nth-child(3) .mh {display: none !important;}
+.l2.oy8Mbf > div:nth-child(3) td:nth-child(3) .mm {display: none !important;}
+.l2:not(.oy8Mbf) > div:nth-child(5) {display: none !important;}
+.l2.oy8Mbf > div:nth-child(4) {display: none !important;}
+*/
+
 
 /* ------------------ EOF ------------------ */
 
