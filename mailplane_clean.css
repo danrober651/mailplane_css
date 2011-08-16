@@ -1,7 +1,42 @@
-body{font-size:12pt;font-family:sans-serif;}
+/*
+
+Mailplane Clean CSS by Jim Mitchell <http://jimmitchell.org>
+Based heavily on work by Ansel Santosa (http://www.anselsantosa.com/) in the Chrome Minimalist Gmail extension.
+Download URL: <http://jimmitchell.org/files/mailplane_clean.css.zip>
+This work released under GNU General Public License, version 3 (GPL-3.0): <http://www.opensource.org/licenses/gpl-3.0.html>
+
+Version: 2.0.3
+
+Change Log:
+04/25/11	(2.0.1) - total rework for new Gmail UI. Changes too numerous to list...
+05/23/11	(2.0.2) - include webkit transitions
+08/16/11	(2.0.3) - remove ad block for new split view option & get rid of older CSS that's no longer needed.
+
+*/
+
+
+/* ------------------ Begin Styles ------------------ */
+
+/* --- webkit transitions --- */
+* {-webkit-transition-property: background-color, background-image, background-position, background-size, border-color, border-radius, border-width, box-shadow, color, font-size, font-weight, height, margin, opacity, width, visibility ; -webkit-transition-duration: .15s; -webkit-transition-timing-function: ease-out;}
+#gbz *, #gbg * {-webkit-transition-property: opacity;}
+* {-webkit-transition-property: height, background-color, border-color, color, opacity;}
+
+/* set the font default */
+body {font-family: Helvetica, sans-serif;font-size: 12pt;}
+
+/* hide the top google bar & make adjustments */
+/*
+#gbar, #guser, #gb, #gbz, span[id=":r2"] {display: none;}
+.nH.qp {border:none;height: 12px;}
+*/
+
+/* clean up the search form */
 table[role='search'] div[role='button']:last-child {display: none !important;}
 table[role='search'] td:last-child {display: none !important;}
 .no nobr {display: none !important;}
+
+/* pretty row icons */
 table img[title $= 'ods'], table img[title $= 'xls'], table img[title $= 'XLS'], table img[title $= 'xlsx'], table img[title $= 'XLSX'] {width: 0px !important; height: 0px !important; padding: 16px 0 0 16px !important; background-position: top left !important; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAwFBMVEX///9twmOXt5vV08ZivFXX1cc4n2BKnW3QzsE1k2AdlkxTsFceoEVjvV5rvVhCrkyMzWx5wVxauFbU7dLc2suo1nxemneSsJcmiFLS0MM3qErN5dU5p2BXs2jl4tKByGcqp0UAiDyv1YHg3s9Oq1KHyGzRz8JknnoAfT85l1ZMsk+cup8ZjUjk6+XMyr0BljrX1cljplhHs1Msp1Flrnr8/PsNgUcOkUVKnlYxhFXq9ukQnj2FxV/z8+9qp4Fzu4ZQkmYmAAAAAXRSTlMAQObYZgAAALxJREFUeF5lzEVuBFEQA9D6CM2Mw8wTZrj/reJWlFXeoiRbKtN/H2mUHeJZ8H69zuc7ojSNZHbo/oodRUOOuxnyb3ELL7Dfn5pXoMWiLNfj5bIoNBeby4VKmI4noI+Fai2FYZjd3X+DZ76AfN9fdcEDnMy2qipKkmQdjiYY0by11tIUshFy4erNUATgPWvt3FPjgFbQeZzzutnWQExKGTslWutqfAgixphvbpQQ5iiEInrL87zvP6E/4zz+ANk3GWWQfcMTAAAAAElFTkSuQmCC) !important;}
 table img[title $= 'mp3'], table img[title $= 'MP3'], table img[title $= 'wma'], table img[title $= 'WMA'], table img[title $= 'aac'], table img[title $= 'AAC'], table img[title $= 'wav'], table img[title $= 'WAV'], table img[title $= 'flac'], table img[title $= 'FLAC'] {width: 0 !important; height: 0 !important; padding: 16px 0 0 16px !important; background-position: top left !important; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAYFBMVEX////JGBLBBwfFDwvPJRzVNCbNIhrDCgfKGhPIFRDXOCndSDTPKB7TMCP22NfHEg3bRDLMHRXjVD3BBAPaQC7hTzrfSzfSLSH88vHOJBq/AQHRKh7YOyvNKSP75+XNIBeaWx34AAAAAXRSTlMAQObYZgAAAHVJREFUeF5NywcKA0EIBVB1ai/bW5L73zIJLOt8EPTxhTvDEO6N4YKtg3mufu0byzKps3UQwqSiFSNDBRXRHA9UDzkiMcgEkBHxD+/fbFICx6sEpTGk9ZQfW/h71806QQ+80BVhRgaShsbDUWbRu9YEXYiI7y+jRgSXm47dBAAAAABJRU5ErkJggg==) !important;}
 table img[title $= 'odf'], table img[title $= 'odt'], table img[title $= 'txt'], table img[title $= 'doc'], table img[title $= 'DOC'], table img[title $= 'docx'], table img[title $= 'DOCX'] {width: 0 !important; height: 0 !important; padding: 16px 0 0 16px !important; background-position: top left !important;  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAwFBMVEX///9Jvv9qyP8Rq/4BjNAxtv8hsP+R1f97zf8stP8Fld4HmeMJneoEkNcWrf8Ne7QnW3wEktoKoO4ImuZaw/8/uv8esP8Glt8NpvgcmdhRmsUAicwCjtOJ0v8MpfYohrl0y/8LofCC0P8MpPRSwf8Bis4OqPsem9oRh8Qlsv9cos0Qgr06dJh5x/UweaNCu/+c2P8cmNYfnt45uf8ar/82t/8mTmcnVXK/5f8dZI0zoNkWe7K14f9Xwv9evvUXmtyLnD/iAAAAAXRSTlMAQObYZgAAAKlJREFUeF41ylOWBEEARNFE2bbRtsf731WnJv5enAsAUDUUQTi8gJhaa+jnKCun/6feF79TrN/U0zcX2u65g9e10w3iQYW3ieUEd0g80QRjee0sEBIPPF5pN8Fqu3U/ibjLukK6t0zDnl0ilMTBtMPUr8qSCIwX2ch7ZkfWjH1gmayZCL4ebWgarJkIP7yD4du0uUjtNrcribQQf5fLcpmf+agAkiRRLMAbyPoVvHcsEKMAAAAASUVORK5CYII%3D) !important;}
@@ -16,18 +51,23 @@ div.VP5otc-U4m8q.D.E, div.iE.D.E {display: none !important;}
 .l.n[style = "margin-left: 5px; "] [class="VP5otc-HT6HAf J-J5-Ji"]:nth-child(5) {display: none !important;}
 textarea.ir {display: none !important;}
 .TC[colspan = '3'] {display: none !important;}
+
+/* BEGIN RAPPORTIVE/PEOPLE BLOCK : COMMENT OUT IF USING THE RAPPORTIVE PLUGIN OPTION or PEOPLE WIDGET */
 h1.ha {margin-right: 200px !important}
 table.iY > tr > td:first-child + td + td > div {width: 0 !important; position: relative !important;}
 table.iY > tr > td:first-child + td + td > div > div {position: absolute !important; right: 15px !important; top: 10px !important}
 table.iY > tr > td:first-child + td + td > div > div u {display: none !important;}
-.u5, .u8 {display: none !important;}
 table.iY > tr > td:first-child + td + td > div > div > div:nth-child(3) > div:first-child > div:last-child {display: none !important;}
 table.iY > tr > td:first-child + td + td > div > div > div:nth-child(3) > div:first-child > div:first-child {display: none !important;}
+table.dFFoge.dGpsQd > tr > td:nth-child(2) {display: none !important}
 table.iY div.hj div.hk {display: inline !important; padding-right: 5px !important;}
 .u8 {display: none !important;}
 .u5 {width: 0px !important;}
 div[class="ip iq"] {margin-right: 13px !important;}
 textarea.ir {width: 100% !important;}
+/* END RAPPORTIVE/PEOPLE BLOCK */
+
+/* remove sidebar fluff */
 div.nH.MC, div.z0DeRc {display: none !important;}
 .T4 {border-bottom: 0 !important;}
 .T0, .TZ {border-top: 0 !important;}
@@ -38,22 +78,14 @@ div.T4.pp div {display: none !important;}
 div.z0 {display: none !important;}
 div.TO a[href$='#spam'] {visibility: hidden;}
 div.TO a[href$='#spam']:before {content: 'Spam'; visibility: visible; font-weight: 400;}
-img.Xo, img.pW, img.pH-CD, img.pV, div.u5, img.Zzev9e {display: none !important;}
+img.Xo, img.pW, img.pH-CD, img.pV, div.u5 {display: none !important;}
 div[role = 'navigation'] + div > span > span.CJ {visibility: hidden;}
 div[role = 'navigation'] + div > span > span.CJ:before {content: 'More'; visibility: visible; font-weight: 400;}
 div.pY {display: none !important;}
-.Ls77Lb + div .T0.pp:first-child, .Ls77Lb + div .T0.pp:first-child + .T0.pp {display: none !important;}
-.l2:not(.oy8Mbf) > div:nth-child(3) {display: none !important;}
-.l2.oy8Mbf > div:nth-child(2) {display: none !important;}
-.l2:not(.oy8Mbf) > div:nth-child(6) {display: none !important;}
-.l2.oy8Mbf > div:nth-child(5) {display: none !important;}
-.l2:not(.oy8Mbf) > div:nth-child(7) {display: none !important;}
-.l2.oy8Mbf > div:nth-child(6) {display: none !important;}
-.l2:not(.oy8Mbf) > div:nth-child(4) {display: none !important;}
-.l2.oy8Mbf > div:nth-child(3) {display: none !important;}
-.l2.oy8Mbf > div:nth-child(3) td:nth-child(1) {display: none !important;}
-.l2.oy8Mbf > div:nth-child(3) td:nth-child(2) {display: none !important;}
-.l2.oy8Mbf > div:nth-child(3) td:nth-child(3) .mh {display: none !important;}
-.l2.oy8Mbf > div:nth-child(3) td:nth-child(3) .mm {display: none !important;}
-.l2:not(.oy8Mbf) > div:nth-child(5) {display: none !important;}
-.l2.oy8Mbf > div:nth-child(4) {display: none !important;}
+div.pp.T0:nth-child(4), div.pp.ps.TZ:nth-child(4), div.T0.TZ.pp {display: none !important;}
+
+/* hide footer info */
+div.JrzpPb {display: none !important;}
+
+/* ------------------ EOF ------------------ */
+

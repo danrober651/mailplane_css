@@ -1,0 +1,5 @@
+LICENSE
+Licensed under the GNU General Public License, version 3 (GPL-3.0)
+<http://www.opensource.org/licenses/gpl-3.0.html>
+
+You are free to modify this work as you see fit.
