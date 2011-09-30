@@ -52,12 +52,14 @@ table img[title $= 'mov'], table img[title $= 'MOV'], table img[title $= 'm4v'],
 
 
 /* BEGIN RAPPORTIVE/PEOPLE BLOCK : COMMENT OUT IF USING THE RAPPORTIVE PLUGIN OPTION or PEOPLE WIDGET */
-/*
+/**/
 div.VP5otc-U4m8q.D.E, div.iE.D.E { display: none !important; }
 [class='VP5otc-HT6HAf J-J5-Ji']:nth-child(6) { display: none !important; }
 textarea.ir { display: none !important; }
 .ChoCtb + div + div > .u5, .ChoCtb, .Bu + .Bu + .Bu { display: none !important; }
-*/
+table.Bs.nH.iY td.Bu:nth-child(2) {display: none;}
+table.Bs.nH.iY td.Bu div.nH.if div.nH.hx {padding-right: 1px;}
+/**/
 /* END RAPPORTIVE/PEOPLE BLOCK */
 
 
