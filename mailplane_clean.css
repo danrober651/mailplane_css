@@ -4,7 +4,7 @@ Mailplane Clean CSS by Jim Mitchell <http://jimmitchell.org>
 Based on work by Ansel Santosa (http://www.anselsantosa.com/) in the Chrome Minimalist For Gmail extension.
 This work released under GNU General Public License, version 3 (GPL-3.0): <http://www.opensource.org/licenses/gpl-3.0.html>
 
-Version: 3.0.0
+Version: 3.0.1
 
 Change Log:
 04/25/11	(2.0.1) - total rework for new Gmail UI. Changes too numerous to list...
@@ -16,6 +16,7 @@ Change Log:
 10/28/11	(2.0.7) - remove promo in apps for marketplace apps in footer.
 10/28/11	(2.0.8) - add ability to remove header links that I don't want to see.
 04/26/12	(3.0.0) - now that the new Gmail UI is standard, replace all styles.
+07/10/12	(3.0.1) - update for recent Gmail UI tweaks by Google.
 
 */
 
@@ -24,27 +25,20 @@ Change Log:
 /* set the font default */
 body {font-family: helvetica, arial, sans-serif;font-size: 12pt;}
 
-
-/* Hide photo and divider */
-#gbg > .gbtc > li:nth-child(7),
-    #gbg > .gbtc > li:nth-child(8),
-    #gbvg > .gbtc > :not(.gbto):nth-child(4) {
-	display: none;
-}
-
-/* widen parent */
-.f-G-b-C {
-	width: 100%;
-}
-
-.f-G-b-C div {
-	float: right;
-	margin-right: 0;
-}
-
 .b7o7Ic {
 	display: none;
 }
+
+table img[title $= "ods"], table img[title $= "xls"], table img[title $= "XLS"], table img[title $= "xlsx"], table img[title $= "XLSX"] { width: 0px !important; height: 0px !important; padding: 16px 0 0 16px !important; background-position: top left !important; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAzSURBVDjLYxBbnnoeiP+jYQYsYuj4/P///xlwKSTGgP/DyACy8WggjhqAbABluRFEUIIB5xoeIOjKcLkAAAAASUVORK5CYII=) !important; }
+table img[title $= "mp3"], table img[title $= "MP3"], table img[title $= "wma"], table img[title $= "WMA"], table img[title $= "aac"], table img[title $= "AAC"], table img[title $= "wav"], table img[title $= "WAV"], table img[title $= "flac"], table img[title $= "FLAC"] { width: 0 !important; height: 0 !important; padding: 16px 0 0 16px !important; background-position: top left !important; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABxSURBVDjLY/j//z8DJRhCEAeagdgNWYCQAeFo/Ewg7gHiIiDmJGRAOFQxOrCFiifgMwCmuQeHy/yhcsrYDEDWjGwA3NlQGhQeCcgG9ODAMNADDQMUi0g1AJnvNiAG4PUCxYFItWikSkKiSlImLTNRggGh29zHlFouTQAAAABJRU5ErkJggg==) !important; }
+table img[title $= "odf"], table img[title $= "odt"], table img[title $= "txt"], table img[title $= "doc"], table img[title $= "DOC"], table img[title $= "docx"], table img[title $= "DOCX"] { width: 0 !important; height: 0 !important; padding: 16px 0 0 16px !important; background-position: top left !important;  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAzSURBVDjLY8ie9/88EP8nA5////8/AwOZmsGYJgYwEIFHXTAyXUDflEiWAZTlRhBBCQYAgc/cUg2HY7YAAAAASUVORK5CYII=) !important; }
+table img[title $= "html"], table img[title $= "HTML"], table img[title $= "js"], table img[title $= "xml"] { width: 0 !important; height: 0 !important; padding: 16px 0 0 16px !important; background-position: top left !important;  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAA4SURBVDiNY6jMe3ceiP+Tgc////+fgYFMzWCMbgADCZg2BtDcC/8JuWDUgGFhANkJibLcCCIowQBFYHK8tWrQGAAAAABJRU5ErkJggg==) !important; }
+table img[title $= "js"], table img[title $= "py"], table img[title $= "java"], table img[title $= "class"] { width: 0 !important; height: 0 !important; padding: 16px 0 0 16px !important; background-position: top left !important;  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAB+SURBVDjLY2DAATzbngsAcQOIxqXm////eDWfB+L/UFqAaAOQNIOwAhJbgKABaJoFcIlhNQCfQlxycANwKYB5A5casAEEbAYF4nsgDsBmCMwAWGgTwv3ohpBqwHxcBsAE9uPxQgJOLxARiAZ4A5Eq0UiVhESVpEyVzERqdgYAL9pZyhSoofsAAAAASUVORK5CYII=) !important; }
+table img[title $= "jar"], table img[title $= "db"], table img[title $= "apk"], table img[title $= "zip"], table img[title $= "ZIP"], table img[title $= "rar"], table img[title $= "RAR"], table img[title $= "tgz"], table img[title $= "TGZ"], table img[title $= "tar"], table img[title $= "TAR"] { width: 0 !important; height: 0 !important; padding: 16px 0 0 16px !important; background-position: top left !important;background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABDSURBVDjLY/j//z8DJZhh8BkABD24MN0MwAlGkBeKcLigiFgDOLEYAuJzkuIFISBuhmoG0VKkeAEGpJA1E23A0MtMANu+Q/DWtwsZAAAAAElFTkSuQmCC) !important; }
+table img[title $= "pdf"], table img[title $= "PDF"] { width: 0 !important; height: 0 !important; padding: 16px 0 0 16px !important; background-position: top left !important; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAACaSURBVDjLY/j//z8DJZjht48+NjwfiN8DsQEOeYIGnIdiB3INuA/E/ykxYD3UAAZyDWiAhgEDpS4IIMcABajm9dCwECDVgAaoRuTYECDWAAGo3xOg7ACoa0Bi+5FwAS4DGpCcD9M0Hylh3Ye66D82A2Ah34AnBTpAXReAbIAAzFSozQzEYGQDYAH1HleIEzLgP6GMg9cASrMzAFbJ+7pbxYEnAAAAAElFTkSuQmCC) !important; }
+table img[title $= "psd"], table img[title $= "odg"], td.yf img[title $= "tif"], td.yf img[title $= "tiff"], td.yf img[title $= "jpeg"], td.yf img[title $= "JPEG"], td.yf img[title $= "TIF"], td.yf img[title $= "TIFF"], td.yf img[title $= "bmp"], td.yf img[title $= "jpg"], td.yf img[title $= "gif"], td.yf img[title $= "png"], td.yf img[title $= "BMP"], td.yf img[title $= "JPG"], td.yf img[title $= "GIF"], td.yf img[title $= "PNG"], td.gH img[title $= "tif"], td.gH img[title $= "tiff"], td.gH img[title $= "jpeg"], td.gH img[title $= "JPEG"], td.gH img[title $= "TIF"], td.gH img[title $= "TIFF"], td.gH img[title $= "bmp"], td.gH img[title $= "jpg"], td.gH img[title $= "gif"], td.gH img[title $= "png"], td.gH img[title $= "BMP"], td.gH img[title $= "JPG"], td.gH img[title $= "GIF"], td.gH img[title $= "PNG"] { width: 0 !important; height: 0 !important; padding: 16px 0 0 16px !important; background-position: top left !important; background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABaSURBVDjLY2BgYMgA4gYycMb///8ZGMjUDMajBuA3oIASAwIYICCAkKHYDMhgQAUJUPEIbIaiGwDSzIFmAAdUEwcSPwOXAeiacQEOXAaQAgZZOqAsN4IISjAAAWm6BHV+IMUAAAAASUVORK5CYII=) !important; }
+table img[title $= "odp"], table img[title $= "ppt"], table img[title $= "pps"], table img[title $= "PPT"], table img[title $= "PPS"], table img[title $= "pptx"], table img[title $= "ppsx"], table img[title $= "PPTX"], table img[title $= "pot"], table img[title $= "PPSX"] { width: 0 !important; height: 0 !important; padding: 16px 0 0 16px !important;background-position: top left !important;background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAwSURBVDjLY3jgZX8eiP+Tgc////+fgYFMzWA8+AxgIAGPGjBoDRjCKZGy3AgiKMEAQeIstyyBWPoAAAAASUVORK5CYII=) !important;}
+table img[title $= "mov"], table img[title $= "MOV"], table img[title $= "m4v"], table img[title $= "mp4"], table img[title $= "M4V"], table img[title $= "MP4"], table img[title $= "avi"], table img[title $= "AVI"], table img[title $= "wmv"], table img[title $= "WMV"], table img[title $= "amv"], table img[title $= "AMV"], table img[title $= "mpeg"], table img[title $= "MPEG"], table img[title $= "mkv"], table img[title $= "MKV"], table img[title $= "flv"], table img[title $= "FLV"] { width: 0 !important; height: 0 !important; padding: 16px 0 0 16px !important;background-position: top left !important;background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABRSURBVDiNY/j//z8DJRgEKoDYgwECMoC4AYoJisEMgEkqALEEEp+gGLoBBUDMAcQOxIrBDCAboLuAZEx1A0gBtHHBqAEUGFBBpgEVYAMozc4A2DreP69kX2YAAAAASUVORK5CYII=) !important;}
 
 .aaj {
 	display: none;
@@ -54,11 +48,8 @@ body {font-family: helvetica, arial, sans-serif;font-size: 12pt;}
 	display: none;
 }
 
-.z0DeRc,    .PS {
-	display: none;
-}
-
-.Bu:not(:first-child) {
+.z0DeRc,
+.PS {
 	display: none;
 }
 
@@ -66,13 +57,9 @@ body {font-family: helvetica, arial, sans-serif;font-size: 12pt;}
 	display: none;
 }
 
-.z0 {
-	display: none;
-}
-
 /* hide chat and buttons*/
 [gh = "ns"] + div > :nth-child(1),
-    [gh = "ns"] + div > :nth-child(3) {
+[gh = "ns"] + div > :nth-child(3){
 	display: none;
 }
 
@@ -111,7 +98,8 @@ body {font-family: helvetica, arial, sans-serif;font-size: 12pt;}
 	display: none;
 }
 
-.vI + tr,    .M3aZbb + tr {
+.vI + tr,
+.M3aZbb + tr{
 	display: none;
 }
 
@@ -124,22 +112,22 @@ body {font-family: helvetica, arial, sans-serif;font-size: 12pt;}
 }
 
 .ov > :nth-child(2),
-    .apc {
+.apc {
 	opacity: 0;
 }
 
 .ov > :nth-child(2) span:last-child,
-    .aeY {
+.aeY {
 	opacity: 0;
 }
 
 .ov > :nth-child(3),
-    .apO > :nth-child(4) {
+.apO > :nth-child(4) {
 	opacity: 0;
 }
 
 .ov > :nth-child(4),
-    .apO > :nth-child(2) {
+.apO > :nth-child(2) {
 	opacity: 0;
 }
 
@@ -151,14 +139,27 @@ body {font-family: helvetica, arial, sans-serif;font-size: 12pt;}
 	display: none;
 }
 
-[href$='#spam'] {
-	visibility: hidden;
+[gh = "ns"],
+[gh = "ns"] + div {
+	display: none;
+}
+.aj9,
+.aj9 > .div,
+.aj9 > .div > .div,
+.ajl {
+	height: 100% !important;
+}
+.ajl {
+	overflow-y: scroll;
 }
 
-[href$='#spam']:before {
-	content: 'Spam';
-	visibility: visible;
-	font-weight: 400;
+.ya {
+	color: transparent !important;
+	overflow: hidden
+}
+.x2 {
+	color: #000 !important;
+	margin-left: 20%;
 }
 
 /* ------------------ EOF ------------------ */
